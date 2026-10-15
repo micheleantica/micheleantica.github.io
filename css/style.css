@@ -228,3 +228,6 @@ h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
 }
+.cert-name a { border-bottom: 1px solid transparent; transition: color .3s, border-color .3s; }
+.cert-name a:hover { color: var(--accent); border-color: var(--accent); }
+.cert-name .arrow { font-family: var(--sans); font-size: 12px; color: var(--muted); }
