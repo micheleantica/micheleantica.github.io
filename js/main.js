@@ -53,6 +53,13 @@
       if (value !== undefined) el.innerHTML = value;
     });
 
+    // "2026-03" → "Mar 2026" / "mar 2026", in the page language.
+    var fmt = new Intl.DateTimeFormat(lang, { month: "short", year: "numeric", timeZone: "UTC" });
+    document.querySelectorAll("[data-date]").forEach(function (el) {
+      var parts = el.dataset.date.split("-");
+      el.textContent = fmt.format(Date.UTC(+parts[0], +parts[1] - 1, 1));
+    });
+
     document.querySelectorAll("[data-tags]").forEach(function (el) {
       var tags = dict[el.dataset.tags] || [];
       el.innerHTML = tags.map(function (t) { return "<li>" + t + "</li>"; }).join("");
