@@ -77,14 +77,15 @@ window.TRANSLATIONS = {
     "proj.hack.date": "October 2025",
     "proj.hack.desc": "Ranked <strong>4th of 30+ teams</strong> (top 15%) by co-developing an AI-powered digital mirror for fashion retail, with a live demo. Shoppers can preview outfits, match items and get personalised recommendations.",
 
+    "cert.title": "Certifications",
+    "cert.expired": "expired",
+
     "beyond.title": "Beyond Work",
     "beyond.activities": "Activities",
     "beyond.a1": "Participant, H-Farm Campus Venture by Arcadia",
     "beyond.a2": "Member, Starting Finance Club H-Farm",
     "beyond.volunteering": "Volunteering",
     "beyond.v2": "Community of Sant'Egidio",
-    "beyond.certs": "Certifications",
-    "beyond.c1": "ICDL IT-Security (Specialised), ICDL Standard, ICDL Base",
     "beyond.languages": "Languages",
 
     "lang.it": "Italian", "lang.en": "English", "lang.ru": "Russian", "lang.ro": "Romanian",
@@ -172,14 +173,15 @@ window.TRANSLATIONS = {
     "proj.hack.date": "Ottobre 2025",
     "proj.hack.desc": "<strong>4° posto su oltre 30 team</strong> (top 15%) con uno specchio digitale basato sull'AI per il fashion retail, presentato con demo dal vivo. Permette di provare outfit, abbinare capi e ricevere consigli personalizzati.",
 
+    "cert.title": "Certificazioni",
+    "cert.expired": "scaduto",
+
     "beyond.title": "Oltre il lavoro",
     "beyond.activities": "Attività",
     "beyond.a1": "Partecipante, H-Farm Campus Venture by Arcadia",
     "beyond.a2": "Membro, Starting Finance Club H-Farm",
     "beyond.volunteering": "Volontariato",
     "beyond.v2": "Comunità di Sant'Egidio",
-    "beyond.certs": "Certificazioni",
-    "beyond.c1": "ICDL IT-Security (Specialised), ICDL Standard, ICDL Base",
     "beyond.languages": "Lingue",
 
     "lang.it": "Italiano", "lang.en": "Inglese", "lang.ru": "Russo", "lang.ro": "Rumeno",
