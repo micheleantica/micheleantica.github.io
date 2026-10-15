@@ -4,7 +4,7 @@
   var STORE_KEY = "lang";
 
   // GoatCounter site code (the "xxx" in https://xxx.goatcounter.com). Empty = analytics off.
-  var GOATCOUNTER = "";
+  var GOATCOUNTER = "mike7h";
 
   if (GOATCOUNTER) {
     var gc = document.createElement("script");
