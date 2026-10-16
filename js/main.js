@@ -170,6 +170,10 @@
     themeToggle.setAttribute("aria-label", dict[isDark() ? "theme.toLight" : "theme.toDark"]);
     themeToggle.setAttribute("aria-pressed", isDark());
     if (metaTheme) metaTheme.content = isDark() ? "#0f1114" : "#fdfdfd";
+    // Tab icon follows the theme: white tile in light mode, black tile in night mode.
+    document.querySelectorAll("link[data-icon]").forEach(function (l) {
+      l.href = l.href.replace(isDark() ? "-light" : "-dark", isDark() ? "-dark" : "-light");
+    });
   }
   function applyTheme(dark) {
     if (dark) root.dataset.theme = "dark"; else delete root.dataset.theme;
