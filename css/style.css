@@ -41,21 +41,21 @@
   --bg: #0f1114;
   --ink: #f1f2f4;
   --body: #e4e6ea;
-  --text: #b4bac4;
-  --muted: #8f97a3;
-  --muted-large: #737b88;
-  --line: #1d2026;
-  --border: #2a2e36;
-  --border-dashed: #4b525d;
-  --border-strong: #3a3f48;
+  --text: #ccd1d9;          /* 12.3:1 */
+  --muted: #a8afba;         /* 8.6:1 */
+  --muted-large: #8e96a3;   /* 6.3:1 */
+  --line: #30343c;          /* dividers */
+  --border: #4f5560;        /* outlines, timeline: 2.6:1 */
+  --border-dashed: #5c636f; /* 3.1:1, just above solid */
+  --border-strong: #6b7280;
   --accent: #93b4ff;        /* ink blue in night mode: 9.2:1 */
   --accent-bright: #6b93ff; /* 6.5:1 */
-  --tile: #f4f4f5;            /* logos are designed for light backgrounds */
-  --tile-outline: rgba(255,255,255,.08);
+  --tile: #e9eaed;            /* logos need a light tile; slightly dimmed to avoid glare */
+  --tile-outline: rgba(255,255,255,.14);
   --selection: #1e3a8a;
   --brand-blue: #3d8fe0;
   --bar-bg: rgba(15,17,20,.84);
-  --bar-shadow: 0 8px 30px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.06);
+  --bar-shadow: 0 8px 30px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.1);
   color-scheme: dark;
 }
 
