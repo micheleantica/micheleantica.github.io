@@ -29,7 +29,7 @@
   --tile-outline: rgba(0,0,0,.06);
   --selection: #fed7aa;
   --brand-blue: #0a66c2;
-  --bar-bg: rgba(253,253,253,.72);
+  --bar-bg: rgba(253,253,253,.86);
   --bar-shadow: 0 8px 30px rgba(17,24,39,.08), 0 1px 0 rgba(17,24,39,.04);
   --serif: "Playfair Display", Georgia, serif;
   --sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -54,7 +54,7 @@
   --tile-outline: rgba(255,255,255,.08);
   --selection: #7c2d12;
   --brand-blue: #3d8fe0;
-  --bar-bg: rgba(15,17,20,.7);
+  --bar-bg: rgba(15,17,20,.84);
   --bar-shadow: 0 8px 30px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.06);
   color-scheme: dark;
 }
@@ -139,11 +139,15 @@ h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--
 @media (min-width: 768px) { .portrait { width: 192px; height: 192px; } }
 
 /* Timeline entries */
-.timeline { border-left: 1px solid var(--border); padding-left: 32px; display: flex; flex-direction: column; gap: 56px; }
+.timeline { padding-left: 32px; display: flex; flex-direction: column; gap: 56px; }
+/* the line runs dot to dot: starts at the first dot, ends at the last */
+.timeline .entry:not(:last-child)::after {
+  content: ""; position: absolute; left: -33px; top: 13px; bottom: -69px; width: 1px; background: var(--border);
+}
 .entry { position: relative; }
 .timeline .entry::before {
   content: ""; position: absolute; left: -36.5px; top: 9px;
-  width: 8px; height: 8px; border-radius: 999px; background: var(--accent-bright);
+  width: 8px; height: 8px; border-radius: 999px; background: var(--accent-bright); z-index: 1;
 }
 .org { margin-top: 4px; font-size: 15px; color: var(--muted); }
 .org em { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 16px; }
@@ -284,8 +288,8 @@ section[id] { scroll-margin-top: 96px; }
   display: flex; align-items: center; gap: 16px;
   max-width: 1152px; margin: 0 auto; padding: 10px 12px;
   border-radius: 22px; border: 1px solid transparent;
-  transition: max-width .7s var(--ease), padding .7s var(--ease), background-color .5s ease,
-              box-shadow .5s ease, border-color .5s ease, backdrop-filter .5s ease;
+  transition: max-width .6s var(--ease), padding .6s var(--ease), background-color .4s ease,
+              box-shadow .4s ease, border-color .4s ease;
   animation: bar-drop 1s var(--ease) .15s both;
 }
 @media (min-width: 768px) { .bar { padding: 12px 24px; } }
@@ -298,7 +302,7 @@ section[id] { scroll-margin-top: 96px; }
 .toolbar.scrolled .bar {
   max-width: 920px; padding: 7px 8px 7px 18px;
   background: var(--bar-bg); box-shadow: var(--bar-shadow); border-color: var(--line);
-  backdrop-filter: blur(16px) saturate(1.6); -webkit-backdrop-filter: blur(16px) saturate(1.6);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
 }
 .toolbar.scrolled .bar::after { opacity: 0; }
 
@@ -367,7 +371,7 @@ section[id] { scroll-margin-top: 96px; }
   pointer-events: none; position: absolute; top: calc(100% - 4px); left: 12px; right: 12px;
   display: flex; flex-direction: column; padding: 10px; border-radius: 22px;
   background: var(--bar-bg); border: 1px solid var(--line); box-shadow: var(--bar-shadow);
-  backdrop-filter: blur(16px) saturate(1.6); -webkit-backdrop-filter: blur(16px) saturate(1.6);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   opacity: 0; transform: translateY(-10px) scale(.98); transform-origin: top center;
   transition: opacity .3s ease, transform .45s var(--ease); visibility: hidden;
 }
@@ -386,13 +390,13 @@ section[id] { scroll-margin-top: 96px; }
 /* reading progress, only on the floating pill */
 .progress {
   position: absolute; left: 22px; right: 22px; bottom: 0; height: 2px; border-radius: 2px;
-  background: var(--accent-bright); transform: scaleX(var(--progress, 0)); transform-origin: left;
+  background: var(--accent-bright); transform: scaleX(0); transform-origin: left; will-change: transform;
   opacity: 0; transition: opacity .4s ease;
 }
 .toolbar.scrolled .progress { opacity: .85; }
 
 @keyframes bar-drop { from { transform: translateY(-140%); opacity: 0; } to { transform: none; opacity: 1; } }
-@keyframes item-in { from { transform: translateY(-14px); opacity: 0; filter: blur(4px); } to { transform: none; opacity: 1; filter: none; } }
+@keyframes item-in { from { transform: translateY(-14px); opacity: 0; } to { transform: none; opacity: 1; } }
 @keyframes draw-line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 /* theme switch: the new theme spreads in a circle from the toggle (browsers with View Transitions) */
