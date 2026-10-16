@@ -54,7 +54,8 @@ window.TRANSLATIONS = {
     "edu.y3": "Year 3", "edu.y3.note": "· In progress",
     "edu.experiential": "Experiential Term (internship)",
     "edu.s1": "Semester 1", "edu.s2": "Semester 2",
-    "edu.enhKey": "Enhancing courses: electives taken alongside the core modules",
+    "edu.coreKey": "Curricular courses: core modules of the degree",
+    "edu.enhKey": "Enhancing courses: electives taken alongside them",
     "edu.programme": "Programme details ↗",
 
     "stats.th": "th", "stats.rd": "rd",
@@ -151,7 +152,8 @@ window.TRANSLATIONS = {
     "edu.y3": "3° anno", "edu.y3.note": "· In corso",
     "edu.experiential": "Experiential Term (stage)",
     "edu.s1": "1° semestre", "edu.s2": "2° semestre",
-    "edu.enhKey": "Enhancing courses: corsi a scelta seguiti oltre ai moduli principali",
+    "edu.coreKey": "Corsi curriculari: moduli obbligatori della laurea",
+    "edu.enhKey": "Enhancing courses: corsi a scelta seguiti in aggiunta",
     "edu.programme": "Dettagli del corso ↗",
 
     "stats.th": "°", "stats.rd": "°",
