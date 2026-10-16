@@ -418,11 +418,11 @@ section[id] { scroll-margin-top: 96px; }
   .theme-toggle, .menu-toggle { width: 44px; height: 44px; }
   .lang button { padding: 13px 7px; }
   .brand { padding: 12px; margin: -12px; }
-  .project-links a, .footer a { display: inline-block; padding-top: 13px; margin-top: -13px; }
-  .project-links a { padding-bottom: 14px; margin-bottom: -12px; }
-  .footer a { padding-bottom: 13px; margin-bottom: -13px; }
   .contact-list a { padding: 8px 0; margin: -8px 0; }
-  .cert-name a { display: inline-block; padding: 6px 0; margin: -6px 0; }
+  /* links with an underline: an invisible layer extends the tap area, so the underline stays put */
+  .project-links a, .footer a, .cert-name a { position: relative; }
+  .project-links a::after, .footer a::after { content: ""; position: absolute; inset: -13px -6px; }
+  .cert-name a::after { content: ""; position: absolute; inset: -8px -4px; }
 }
 /* Nothing below 12px on small screens */
 @media (max-width: 640px) {
