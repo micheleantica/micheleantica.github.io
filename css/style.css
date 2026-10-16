@@ -245,12 +245,12 @@ h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--
 }
 .ptile.ptile-tight { padding: 4px; }
 
-/* Courses by semester; enhancing courses get an accent outline */
+/* Courses by semester; enhancing courses get a quiet dashed outline */
 .year { display: flex; flex-direction: column; gap: 10px; }
 .sem { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 4px 12px; align-items: start; }
 .sem-label { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: 5px; }
 .sem .tags { margin-top: 0; }
 @media (max-width: 560px) { .sem { grid-template-columns: 1fr; } .sem-label { padding-top: 0; } }
-.tags li.enh { border-color: #fdba74; background: #fff7ed; color: var(--accent); }
+.tags li.enh { border-style: dashed; border-color: #b8bec7; }
 .enh-key { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--muted); }
-.enh-dot { width: 18px; height: 12px; border: 1px solid #fdba74; background: #fff7ed; border-radius: 999px; flex-shrink: 0; }
+.enh-dot { width: 18px; height: 12px; border: 1px dashed #b8bec7; border-radius: 999px; flex-shrink: 0; }
