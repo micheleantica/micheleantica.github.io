@@ -340,7 +340,7 @@ section[id] { scroll-margin-top: 96px; }
 .lang button:hover { color: var(--accent); }
 .lang button.active { color: var(--ink); }
 
-/* light/night toggle: the sun's rays retract and a "bite" turns it into a moon */
+/* light/night toggle */
 .theme-toggle, .menu-toggle {
   width: 38px; height: 38px; border-radius: 999px; border: 1px solid var(--border);
   background: transparent; color: var(--ink); cursor: pointer;
@@ -349,12 +349,13 @@ section[id] { scroll-margin-top: 96px; }
 .theme-toggle:hover, .menu-toggle:hover { border-color: var(--border-strong); background: color-mix(in srgb, var(--ink) 5%, transparent); }
 .theme-toggle:active, .menu-toggle:active { transform: scale(.92); }
 .theme-toggle svg { width: 18px; height: 18px; overflow: visible; }
-.sun-core { fill: currentColor; transform-origin: 12px 12px; transition: transform .6s var(--ease); }
-.moon-bite { transition: transform .6s var(--ease); }
-.sun-rays { stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; transform-origin: 12px 12px; transition: transform .6s var(--ease), opacity .4s ease; }
-[data-theme="dark"] .sun-core { transform: scale(1.45); }
-[data-theme="dark"] .moon-bite { transform: translate(-7px, 4px); }
-[data-theme="dark"] .sun-rays { transform: rotate(-90deg) scale(.4); opacity: 0; }
+/* sun and moon swap places with a quarter turn */
+.icon-sun, .icon-moon { transform-origin: 12px 12px; transition: transform .55s var(--ease), opacity .3s ease; }
+.icon-sun circle { fill: currentColor; }
+.icon-sun path { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.icon-moon { fill: currentColor; opacity: 0; transform: rotate(-90deg) scale(.5); }
+[data-theme="dark"] .icon-sun { opacity: 0; transform: rotate(90deg) scale(.5); }
+[data-theme="dark"] .icon-moon { opacity: 1; transform: none; }
 
 /* phone menu */
 .menu-toggle { position: relative; }
