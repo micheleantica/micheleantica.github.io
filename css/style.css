@@ -302,11 +302,11 @@ section[id] { scroll-margin-top: 96px; }
 }
 .toolbar.scrolled .bar::after { opacity: 0; }
 
-.brand {
-  font-family: var(--serif); font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.02em;
-  animation: item-in .8s var(--ease) .35s both;
-}
-.brand em { color: var(--accent-bright); padding-right: 1px; }
+/* Logo: semi-bold Playfair M with an orange full stop (vector, so it is sharp at any size) */
+.brand { display: flex; align-items: center; color: var(--ink); animation: item-in .8s var(--ease) .35s both; }
+.brand-mark { height: 21px; width: auto; fill: currentColor; overflow: visible; }
+.brand-dot { fill: var(--accent-bright); transform-box: fill-box; transform-origin: center; transition: transform .5s var(--ease); }
+.brand:hover .brand-dot { transform: scale(1.35); }
 
 /* section links with a highlight that slides to the section being read */
 .nav { position: relative; display: none; align-items: center; gap: 2px; margin: 0 auto; }
