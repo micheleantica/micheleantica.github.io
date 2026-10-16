@@ -60,7 +60,8 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+button, a { -webkit-tap-highlight-color: transparent; }
 body {
   background: var(--bg);
   color: var(--body);
@@ -77,7 +78,7 @@ ul { list-style: none; }
 
 /* Hero */
 .hero {
-  min-height: 85vh; padding: 112px 0 40px;  /* top padding keeps the heading clear of the toolbar */
+  min-height: 85vh; min-height: 85svh; padding: 112px 0 40px;  /* svh: no jump when the phone's address bar hides */  /* top padding keeps the heading clear of the toolbar */
   display: flex; flex-direction: column; justify-content: center;
 }
 .hero h1 {
@@ -408,4 +409,25 @@ section[id] { scroll-margin-top: 96px; }
 @media (prefers-reduced-motion: reduce) {
   .bar, .bar::after, .brand, .nav a, .tools { animation: none; }
   .bar, .nav-pill, .menu-panel, .menu-panel a { transition: none; }
+}
+
+/* ===== Phones and touch screens ==================================== */
+/* Bigger tap areas (about 44px) for standalone links and buttons.
+   Padding + equal negative margin enlarges the hit area without moving anything. */
+@media (pointer: coarse) {
+  .theme-toggle, .menu-toggle { width: 44px; height: 44px; }
+  .lang button { padding: 13px 7px; }
+  .brand { padding: 12px; margin: -12px; }
+  .project-links a, .footer a { display: inline-block; padding-top: 13px; margin-top: -13px; }
+  .project-links a { padding-bottom: 14px; margin-bottom: -12px; }
+  .footer a { padding-bottom: 13px; margin-bottom: -13px; }
+  .contact-list a { padding: 8px 0; margin: -8px 0; }
+  .cert-name a { display: inline-block; padding: 6px 0; margin: -6px 0; }
+}
+/* Nothing below 12px on small screens */
+@media (max-width: 640px) {
+  .tags li { font-size: 12px; }
+  .sem-label { font-size: 12px; }
+  .stat .src { font-size: 11.5px; }
+  .enh-key { font-size: 13px; }
 }
