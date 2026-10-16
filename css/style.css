@@ -242,3 +242,4 @@ h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--
 .plogo-noi { height: 30px; }
 .plogo-mark { height: 36px; }
 .plogo-sep { width: 1px; height: 22px; background: #d1d5db; }
+.project-head h3 { flex: 1 1 200px; min-width: 0; }
