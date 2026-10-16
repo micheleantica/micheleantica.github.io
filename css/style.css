@@ -233,3 +233,11 @@ h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--
 .cert-name a { border-bottom: 1px solid transparent; transition: color .3s, border-color .3s; }
 .cert-name a:hover { color: var(--accent); border-color: var(--accent); }
 .cert-name .arrow { font-family: var(--sans); font-size: 12px; color: var(--muted); }
+
+/* Project logos */
+.project-logos { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.plogo { display: block; width: auto; }
+.plogo-word { height: 20px; }
+.plogo-stack { height: 38px; }
+.plogo-noi { height: 30px; }
+.plogo-sep { width: 1px; height: 22px; background: #d1d5db; }
