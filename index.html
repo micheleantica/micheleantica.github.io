@@ -26,17 +26,49 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='Georgia' font-style='italic' fill='%23ea580c'>M</text></svg>">
   <link rel="preload" href="assets/fonts/playfair-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <script>document.documentElement.classList.add("js")</script>
-  <link rel="stylesheet" href="css/style.css?v=202610161152">
+  <script>(function(d){d.classList.add("js");try{if(localStorage.getItem("theme")==="dark")d.dataset.theme="dark"}catch(e){}})(document.documentElement)</script>
+  <meta name="theme-color" content="#fdfdfd">
+  <link rel="stylesheet" href="css/style.css?v=202610161157">
 </head>
 <body>
-  <nav class="topnav">
-    <a href="https://www.linkedin.com/in/michele-antica-783a40328/" target="_blank" rel="noopener" data-track="linkedin">LinkedIn</a>
-    <a href="mailto:antica.michele05@gmail.com">Email</a>
-    <span class="lang" role="group" aria-label="Language">
-      <button type="button" data-lang="en">EN</button><span aria-hidden="true">/</span><button type="button" data-lang="it">IT</button>
-    </span>
-  </nav>
+  <header class="toolbar" id="toolbar">
+    <div class="bar">
+      <a href="#home" class="brand" aria-label="Michele Antica, back to top"><em>M</em>A</a>
+      <nav class="nav" aria-label="Sections">
+        <span class="nav-pill" aria-hidden="true"></span>
+          <a href="#about" data-section="about" data-i18n="about.title">About Me</a>
+          <a href="#experience" data-section="experience" data-i18n="exp.title">Experience</a>
+          <a href="#education" data-section="education" data-i18n="edu.title">Education</a>
+          <a href="#projects" data-section="projects" data-i18n="proj.title">Projects</a>
+          <a href="#certifications" data-section="certifications" data-i18n="cert.title">Certifications</a>
+          <a href="#contact" data-section="contact" data-i18n="contact.title">Contact</a>
+      </nav>
+      <div class="tools">
+        <span class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en">EN</button><span aria-hidden="true">/</span><button type="button" data-lang="it">IT</button>
+        </span>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark theme">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <mask id="moon-cut"><rect width="24" height="24" fill="#fff"/><circle class="moon-bite" cx="24" cy="4" r="9" fill="#000"/></mask>
+            <circle class="sun-core" cx="12" cy="12" r="5" mask="url(#moon-cut)"/>
+            <g class="sun-rays"><path d="M12 1.5v2.2M12 20.3v2.2M1.5 12h2.2M20.3 12h2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></g>
+          </svg>
+        </button>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="menuPanel">
+          <span></span><span></span>
+        </button>
+      </div>
+      <span class="progress" aria-hidden="true"></span>
+    </div>
+    <nav class="menu-panel" id="menuPanel" aria-label="Sections">
+      <a href="#about" data-i18n="about.title">About Me</a>
+      <a href="#experience" data-i18n="exp.title">Experience</a>
+      <a href="#education" data-i18n="edu.title">Education</a>
+      <a href="#projects" data-i18n="proj.title">Projects</a>
+      <a href="#certifications" data-i18n="cert.title">Certifications</a>
+      <a href="#contact" data-i18n="contact.title">Contact</a>
+    </nav>
+  </header>
 
   <main class="container">
     <!-- Hero -->
@@ -388,7 +420,7 @@
     <a href="#home" data-i18n="footer.top">Back to top ↑</a>
   </footer>
 
-  <script src="js/translations.js?v=202610161152" defer></script>
-  <script src="js/main.js?v=202610161152" defer></script>
+  <script src="js/translations.js?v=202610161157" defer></script>
+  <script src="js/main.js?v=202610161157" defer></script>
 </body>
 </html>

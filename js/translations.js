@@ -96,6 +96,7 @@ window.TRANSLATIONS = {
     "contact.title": "Contact",
     "contact.lead": "Interested in working together or want to know more about my experience?",
 
+    "theme.toDark": "Switch to night theme", "theme.toLight": "Switch to light theme",
     "footer.top": "Back to top ↑"
   },
 
@@ -194,6 +195,7 @@ window.TRANSLATIONS = {
     "contact.title": "Contatti",
     "contact.lead": "Vuoi lavorare insieme o saperne di più sulla mia esperienza?",
 
+    "theme.toDark": "Passa al tema notte", "theme.toLight": "Passa al tema chiaro",
     "footer.top": "Torna su ↑"
   }
 };
