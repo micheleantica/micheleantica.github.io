@@ -77,7 +77,7 @@ ul { list-style: none; }
 
 /* Hero */
 .hero {
-  min-height: 85vh;
+  min-height: 85vh; padding: 112px 0 40px;  /* top padding keeps the heading clear of the toolbar */
   display: flex; flex-direction: column; justify-content: center;
 }
 .hero h1 {
