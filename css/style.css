@@ -171,7 +171,7 @@ h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--
 
 /* Projects */
 .projects { display: flex; flex-direction: column; gap: 48px; }
-.project-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.project-head { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; }
 .project h3 { font-size: 24px; }
 
 .project p { margin-top: 10px; color: var(--text); font-weight: 300; line-height: 1.65; }
@@ -235,9 +235,10 @@ h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--
 .cert-name .arrow { font-family: var(--sans); font-size: 12px; color: var(--muted); }
 
 /* Project logos */
-.project-logos { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.project-logos { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
 .plogo { display: block; width: auto; }
 .plogo-word { height: 20px; }
 .plogo-stack { height: 38px; }
 .plogo-noi { height: 30px; }
+.plogo-mark { height: 36px; }
 .plogo-sep { width: 1px; height: 22px; background: #d1d5db; }
