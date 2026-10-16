@@ -48,11 +48,11 @@
   --border: #2a2e36;
   --border-dashed: #4b525d;
   --border-strong: #3a3f48;
-  --accent: #fb923c;
-  --accent-bright: #f97316;
+  --accent: #93b4ff;        /* ink blue in night mode: 9.2:1 */
+  --accent-bright: #6b93ff; /* 6.5:1 */
   --tile: #f4f4f5;            /* logos are designed for light backgrounds */
   --tile-outline: rgba(255,255,255,.08);
-  --selection: #7c2d12;
+  --selection: #1e3a8a;
   --brand-blue: #3d8fe0;
   --bar-bg: rgba(15,17,20,.84);
   --bar-shadow: 0 8px 30px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.06);
