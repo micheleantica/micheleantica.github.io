@@ -111,28 +111,39 @@
   }
 
   // Wide and transparent at the very top; floating pill + reading progress once scrolled.
-  var ticking = false;
+  // Section positions are measured once and re-measured only when the page size changes,
+  // so scrolling itself does no layout work.
+  var progressBar = toolbar.querySelector(".progress");
+  var sections = [], maxScroll = 1, isScrolled = null, ticking = false;
+  function measure() {
+    sections = navLinks.map(function (a) {
+      var el = document.getElementById(a.dataset.section);
+      return { id: a.dataset.section, top: el ? el.getBoundingClientRect().top + window.scrollY : Infinity };
+    });
+    maxScroll = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+    onScroll();
+  }
   function onScroll() {
     ticking = false;
     var y = window.scrollY;
-    toolbar.classList.toggle("scrolled", y > 24);
-    var max = document.documentElement.scrollHeight - innerHeight;
-    toolbar.style.setProperty("--progress", max > 0 ? Math.min(1, y / max).toFixed(4) : 0);
+    var scrolled = y > 24;
+    if (scrolled !== isScrolled) { isScrolled = scrolled; toolbar.classList.toggle("scrolled", scrolled); }
+    progressBar.style.transform = "scaleX(" + Math.min(1, y / maxScroll).toFixed(4) + ")";
 
     // Active section = the last one whose top has passed the upper third of the screen.
-    var current = null;
-    navLinks.forEach(function (a) {
-      var s = document.getElementById(a.dataset.section);
-      if (s && s.getBoundingClientRect().top < innerHeight * 0.35) current = a.dataset.section;
-    });
-    if (innerHeight + y >= document.documentElement.scrollHeight - 4) current = "contact";
-    if (!activeLink || activeLink.dataset.section !== current) setActive(current);
+    var line = y + innerHeight * 0.35, current = null;
+    for (var i = 0; i < sections.length; i++) if (sections[i].top < line) current = sections[i].id;
+    if (y >= maxScroll - 4) current = "contact";
+    if ((activeLink ? activeLink.dataset.section : null) !== current) setActive(current);
   }
   window.addEventListener("scroll", function () {
     if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
   }, { passive: true });
-  window.addEventListener("resize", movePill);
-  onScroll();
+  window.addEventListener("resize", function () { measure(); movePill(); });
+  if ("ResizeObserver" in window) new ResizeObserver(measure).observe(document.body);
+  window.addEventListener("load", measure);
+  if (document.fonts) document.fonts.ready.then(measure);
+  measure();
 
   // Phone menu
   var menuToggle = document.getElementById("menuToggle");
