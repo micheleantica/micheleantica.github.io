@@ -24,14 +24,14 @@
   <meta name="twitter:title" content="Michele Antica | Digital Economics & Finance">
   <meta name="twitter:description" content="Internal audit, ESG compliance, research and operations. BSc student at the University of Chichester, in partnership with H-Farm College.">
   <meta name="twitter:image" content="https://micheleantica.github.io/assets/og-card.jpg">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/favicon-light.svg" type="image/svg+xml" data-icon="svg">
+  <link rel="icon" href="assets/favicon-light-32.png" sizes="32x32" type="image/png" data-icon="png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/playfair-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <script>(function(d){d.classList.add("js");try{if(localStorage.getItem("theme")==="dark")d.dataset.theme="dark"}catch(e){}})(document.documentElement)</script>
+  <script>(function(d){d.classList.add("js");try{if(localStorage.getItem("theme")==="dark"){d.dataset.theme="dark";document.querySelectorAll("link[data-icon]").forEach(function(l){l.href=l.href.replace("-light","-dark")})}}catch(e){}})(document.documentElement)</script>
   <meta name="theme-color" content="#fdfdfd">
-  <link rel="stylesheet" href="css/style.css?v=202610161242">
+  <link rel="stylesheet" href="css/style.css?v=202610161248">
 </head>
 <body>
   <header class="toolbar" id="toolbar">
@@ -425,7 +425,7 @@
     <a href="#home" data-i18n="footer.top">Back to top ↑</a>
   </footer>
 
-  <script src="js/translations.js?v=202610161242" defer></script>
-  <script src="js/main.js?v=202610161242" defer></script>
+  <script src="js/translations.js?v=202610161248" defer></script>
+  <script src="js/main.js?v=202610161248" defer></script>
 </body>
 </html>
