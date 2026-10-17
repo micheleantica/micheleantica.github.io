@@ -1,7 +1,6 @@
 (function () {
   var T = window.TRANSLATIONS;
   var DEFAULT = "en";
-  var STORE_KEY = "lang";
 
   // GoatCounter site code (the "xxx" in https://xxx.goatcounter.com). Empty = analytics off.
   var GOATCOUNTER = "mike7h";
@@ -30,17 +29,10 @@
     track("click: " + name);
   });
 
-  function storedLang() {
-    try { return localStorage.getItem(STORE_KEY); } catch (e) { return null; }
-  }
-
-  // Priority: ?lang= in the URL, then the visitor's last choice, then English.
+  // English unless the link asks for Italian (?lang=it). The plain address always opens in English.
   function initialLang() {
     var fromUrl = new URLSearchParams(location.search).get("lang");
-    if (fromUrl && T[fromUrl]) return fromUrl;
-    var saved = storedLang();
-    if (saved && T[saved]) return saved;
-    return DEFAULT;
+    return fromUrl && T[fromUrl] ? fromUrl : DEFAULT;
   }
 
   function setLang(lang) {
@@ -70,8 +62,6 @@
       btn.classList.toggle("active", on);
       btn.setAttribute("aria-pressed", on);
     });
-
-    try { localStorage.setItem(STORE_KEY, lang); } catch (e) {}
 
     var url = new URL(location.href);
     if (lang === DEFAULT) url.searchParams.delete("lang");
