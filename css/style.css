@@ -436,16 +436,3 @@ section[id] { scroll-margin-top: 96px; }
   .stat .src { font-size: 11.5px; }
   .enh-key { font-size: 13px; }
 }
-
-/* Experience: logo column to the left of the whole entry, like Projects; everything else sits in one text column */
-.timeline .entry { display: grid; grid-template-columns: 48px minmax(0, 1fr); column-gap: 20px; }
-.timeline .entry > * { grid-column: 2; }
-.timeline .entry > .ptile { grid-column: 1; grid-row: 1 / span 5; margin-top: 7px; align-self: start; } /* 7px = top of the title's letters */
-.ptile.ptile-wide { padding: 6px; }
-.ptile.ptile-full { padding: 0; border-color: transparent; } /* brand tile that fills the whole square */
-@media (max-width: 480px) {
-  .timeline .entry { grid-template-columns: 40px minmax(0, 1fr); column-gap: 14px; }
-  .timeline .entry > .ptile { width: 40px; height: 40px; padding: 6px; margin-top: 6px; }
-  .timeline .entry > .ptile.ptile-tight { padding: 3px; }
-  .timeline .entry > .ptile.ptile-full { padding: 0; }
-}
