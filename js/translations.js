@@ -11,7 +11,7 @@ window.TRANSLATIONS = {
 
     "about.title": "About Me",
     "about.p1": "Studying for a BSc in Digital Economics & Finance awarded by the <strong>University of Chichester</strong>, with classes at <strong>H-Farm College</strong> in Venice. On track for first-class honours, graduating in June 2027.",
-    "about.p2": "My experience spans <strong>internal audit</strong>, <strong>ESG</strong>, <strong>procurement</strong>, <strong>supply chain</strong>, <strong>research</strong> and <strong>operations</strong>. I co-authored a paper published in Forbes Italia and coordinated the logistics for 2,600+ pilgrims at the 2025 Jubilee in Rome.",
+    "about.p2": "My experience spans <strong>internal audit</strong>, <strong>compliance</strong>, <strong>procurement</strong>, <strong>supply chain</strong>, <strong>research</strong> and <strong>operations</strong>. I co-authored a paper published in Forbes Italia and coordinated the logistics for 2,600+ pilgrims at the 2025 Jubilee in Rome.",
     "about.workingOn": "Lately:",
     "about.w1": "Completed my Internal Audit internship at <strong>Carraro Group</strong> (October 2026).",
     "about.w2": "Finishing my BSc, expected June 2027.",
@@ -119,7 +119,7 @@ window.TRANSLATIONS = {
 
     "about.title": "Chi sono",
     "about.p1": "Studio per una laurea triennale in Digital Economics & Finance rilasciata dalla <strong>University of Chichester</strong>, con lezioni all'<strong>H-Farm College</strong> di Venezia. Media da first-class honours, laurea prevista a giugno 2027.",
-    "about.p2": "Ho esperienza in <strong>internal audit</strong>, <strong>ESG</strong>, <strong>procurement</strong>, <strong>supply chain</strong>, <strong>ricerca</strong> e <strong>operations</strong>. Sono coautore di un paper pubblicato su Forbes Italia e ho coordinato la logistica per oltre 2.600 pellegrini al Giubileo 2025 a Roma.",
+    "about.p2": "Ho esperienza in <strong>internal audit</strong>, <strong>compliance</strong>, <strong>procurement</strong>, <strong>supply chain</strong>, <strong>ricerca</strong> e <strong>operations</strong>. Sono coautore di un paper pubblicato su Forbes Italia e ho coordinato la logistica per oltre 2.600 pellegrini al Giubileo 2025 a Roma.",
     "about.workingOn": "Di recente:",
     "about.w1": "Ho concluso lo stage in Internal Audit in <strong>Carraro Group</strong> (ottobre 2026).",
     "about.w2": "La conclusione della laurea, prevista a giugno 2027.",
