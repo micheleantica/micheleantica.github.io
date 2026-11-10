@@ -44,6 +44,14 @@ window.TRANSLATIONS = {
     "exp.diocese.b2": "Achieved <strong>96% average room occupancy</strong> across 10+ facilities with an allocation model matching group sizes to available capacity.",
     "exp.diocese.tags": ["Logistics Planning", "Supplier Coordination", "Capacity Planning", "Resource Allocation"],
 
+    "exp.ghegin.role": "Sales Intern",
+    "exp.ghegin.place": "Padua",
+    "exp.ghegin.date": "June – August 2023",
+    "exp.ghegin.b1": "Supported the reorganisation of the showroom layout based on customers' preferences and purchasing patterns, improving <strong>product visibility</strong>.",
+    "exp.ghegin.b2": "Managed inventory to ensure product availability and streamlined warehouse organisation.",
+    "exp.ghegin.b3": "Conducted daily checks, monitored and restocked high-demand items.",
+    "exp.ghegin.tags": ["Customer Needs Analysis", "Inventory Management", "Merchandising", "Restocking"],
+
     "edu.title": "Education",
     "edu.degree": "BSc in Digital Economics and Finance",
     "edu.place": "Venice",
@@ -143,6 +151,14 @@ window.TRANSLATIONS = {
     "exp.diocese.b1": "Gestione completa di trasporti e alloggi per <strong>oltre 2.600 pellegrini</strong> al Giubileo 2025 a Roma, coordinando più di 50 gruppi e 12 fornitori.",
     "exp.diocese.b2": "<strong>Occupazione media delle camere del 96%</strong> su oltre 10 strutture, grazie a un modello di assegnazione che abbina la dimensione dei gruppi alla capienza disponibile.",
     "exp.diocese.tags": ["Pianificazione logistica", "Coordinamento fornitori", "Capacity planning", "Allocazione risorse"],
+
+    "exp.ghegin.role": "Stage in Vendita",
+    "exp.ghegin.place": "Padova",
+    "exp.ghegin.date": "Giugno – agosto 2023",
+    "exp.ghegin.b1": "Supporto alla riorganizzazione del layout dello showroom in base alle preferenze e alle abitudini d'acquisto dei clienti, migliorando la <strong>visibilità dei prodotti</strong>.",
+    "exp.ghegin.b2": "Gestione dell'inventario per garantire la disponibilità dei prodotti e ottimizzazione dell'organizzazione del magazzino.",
+    "exp.ghegin.b3": "Controlli quotidiani, monitoraggio e rifornimento degli articoli più richiesti.",
+    "exp.ghegin.tags": ["Analisi dei bisogni dei clienti", "Gestione dell'inventario", "Merchandising", "Rifornimento"],
 
     "edu.title": "Formazione",
     "edu.degree": "Laurea triennale (BSc) in Digital Economics and Finance",
