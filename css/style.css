@@ -270,11 +270,11 @@ h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--
   box-shadow: 0 0 0 5px var(--bg), 0 1px 3px rgba(17,24,39,.08);
 }
 .timeline .entry > .node.ptile-tight { padding: 4px; }
-.timeline .entry > .node.ptile-wide { padding: 4px 3px; }
+.timeline .entry > .node.ptile-wide { padding: 5px; }
 @media (max-width: 480px) {
   .timeline .entry > .node { left: -51px; width: 36px; height: 36px; padding: 6px; border-radius: 10px; }
   .timeline .entry > .node.ptile-tight { padding: 3px; }
-  .timeline .entry > .node.ptile-wide { padding: 3px 2px; }
+  .timeline .entry > .node.ptile-wide { padding: 4px; }
 }
 
 
