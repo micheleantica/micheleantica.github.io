@@ -146,10 +146,6 @@ h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--
   content: ""; position: absolute; left: -33px; top: 13px; bottom: -69px; width: 1px; background: var(--border);
 }
 .entry { position: relative; }
-.timeline .entry::before {
-  content: ""; position: absolute; left: -36.5px; top: 9px;
-  width: 8px; height: 8px; border-radius: 999px; background: var(--accent-bright); z-index: 1;
-}
 .org { margin-top: 4px; font-size: 15px; color: var(--muted); }
 .org em { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 16px; }
 .org a { color: var(--accent); font-size: 13px; border-bottom: 1px solid transparent; transition: border-color .3s; }
@@ -268,9 +264,17 @@ h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--
 }
 .ptile.ptile-tight { padding: 4px; }
 
-/* Experience: logo beside the title block; the bullets below keep the full width */
-.entry-head { display: grid; grid-template-columns: 48px minmax(0, 1fr); column-gap: 18px; align-items: start; }
-.entry-head > .ptile { margin-top: 7px; }
+/* Experience: the company logo is the node on the timeline, centred on the line */
+.timeline .entry > .node {
+  position: absolute; left: -53px; top: -6px; z-index: 1; width: 40px; height: 40px; padding: 7px; border-radius: 11px;
+  box-shadow: 0 0 0 5px var(--bg), 0 1px 3px rgba(17,24,39,.08);
+}
+.timeline .entry > .node.ptile-tight { padding: 4px; }
+@media (max-width: 480px) {
+  .timeline .entry > .node { left: -51px; width: 36px; height: 36px; padding: 6px; border-radius: 10px; }
+  .timeline .entry > .node.ptile-tight { padding: 3px; }
+}
+
 
 /* Courses by semester; enhancing courses get a quiet dashed outline */
 .year { display: flex; flex-direction: column; gap: 10px; }
