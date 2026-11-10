@@ -218,6 +218,9 @@ h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--
 .block h3 { margin-bottom: 12px; }
 .block li { color: var(--text); font-weight: 300; line-height: 1.6; font-size: 15.5px; margin-bottom: 6px; }
 .langs li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.lang-name { display: flex; align-items: center; gap: 12px; }
+.flag { flex: none; display: block; border-radius: 50%; box-shadow: 0 0 0 1px rgba(17,24,39,.14); }
+:root[data-theme="dark"] .flag { box-shadow: 0 0 0 1px rgba(255,255,255,.2); filter: brightness(.92); }
 .langs em { font-style: normal; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); align-self: center; }
 
 /* Contact */
