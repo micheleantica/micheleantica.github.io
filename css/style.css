@@ -155,6 +155,7 @@ h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--
 .org a { color: var(--accent); font-size: 13px; border-bottom: 1px solid transparent; transition: border-color .3s; }
 .org a:hover { border-color: var(--accent); }
 .date { margin-top: 6px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.date .dur { white-space: nowrap; }
 .points { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; color: var(--text); font-weight: 300; line-height: 1.6; font-size: 15.5px; }
 .points li { position: relative; padding-left: 16px; }
 .points li::before { content: ""; position: absolute; left: 0; top: .72em; width: 5px; height: 1px; background: var(--muted); }
